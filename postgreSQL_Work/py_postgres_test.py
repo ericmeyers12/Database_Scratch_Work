@@ -42,7 +42,8 @@ def main():
 	ip_address = []
 
 	for i in range(len(data)):
-		cursor.execute('INSERT INTO mock_data (id, gender, firt_name, last_name, email, ip_address) VALUES (%s, %s, %s, %s, %s, %s)', (data[i]["id"], data[i]["gender"], data[i]["first_name"], data[i]["last_name"],data[i]["email"], data[i]["ip_address"]))
+		cursor.execute('INSERT INTO mock_data (id, gender, firt_name, last_name, email, ip_address) VALUES (%s, %s, %s, %s, %s, %s)', 
+			(data[i]["id"], data[i]["gender"], data[i]["first_name"], data[i]["last_name"],data[i]["email"], data[i]["ip_address"]))
 		data_id.append(data[i]["id"])
 		gender.append(data[i]["gender"])
 		first_name.append(data[i]["first_name"])
